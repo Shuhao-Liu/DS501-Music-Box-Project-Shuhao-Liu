@@ -1,5 +1,6 @@
 # DS501-Music-Box-Project-Shuhao-Liu
 The goal of the project is to predict the user churn rate. This readme file summarizes the workflow and acts as an index. 
+For some files both html and ipynb were uploaded for better viewing results.
 The raw data were downloaded and processed with commands in 
 
 0_create_data_folders
