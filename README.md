@@ -38,6 +38,7 @@ In 6, more features (recency feature, play time feature and fancier frequency fe
 
 With more features, the model performace for Random Forest is around 0.013% better in AUC. 
 The model predicts the user churn rate and has coommercial application of keeping target users by targeted promotion.
+
 Extra notes regarding AWS EC2 usage:
 
 Databricks charges AWS EC2 usage by Databricks unit (DBU) in addition to AWS EC2 cost. During the cluster creation, I explored the possiblity of EC2 unit combination. For general purpose, I used a cluster with an on-demand m5.large as driver (cheapest option, 8gb memory, 2 cores) and an on-spot m4.xlarge (16gb memory, 4 cores) as worker with 40% percent of on-demand instance price bidding (since according to AWS chart, m4.xlarge usually is 70% off for on-spot price, and not highly demanded).
