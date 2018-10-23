@@ -1,6 +1,6 @@
 # DS501-Music-Box-Project-Shuhao-Liu
-The goal of the project is to predict the user churn rate. This readme file summarizes the workflow and acts as an index. 
-For some files both html and ipynb were uploaded for better viewing results.
+The goal of the project is to predict the user churn rate. This readme file summarizes the workflow and results and acts as an index. 
+
 The raw data were downloaded and processed with commands in 
 
 0_create_data_folders
@@ -31,7 +31,13 @@ Rest of process can be seen in those files:
 3_bot user removal and event table creation.ipynb
 4_feature_label_generation_with_spark.ipynb
 5_train_model_spark_ml.ipynb
+6_train_model_spark_ml all features.ipynb
 
+In 5, only freqency feature and profile (device) feature were used for modeling.
+In 6, more features (recency feature, play time feature and fancier frequency feature) were added to the model.
+
+With more features, the model performace for Random Forest is around 0.013% better in AUC. 
+The model predicts the user churn rate and has coommercial application of keeping target users by targeted promotion.
 Extra notes regarding AWS EC2 usage:
 
 Databricks charges AWS EC2 usage by Databricks unit (DBU) in addition to AWS EC2 cost. During the cluster creation, I explored the possiblity of EC2 unit combination. For general purpose, I used a cluster with an on-demand m5.large as driver (cheapest option, 8gb memory, 2 cores) and an on-spot m4.xlarge (16gb memory, 4 cores) as worker with 40% percent of on-demand instance price bidding (since according to AWS chart, m4.xlarge usually is 70% off for on-spot price, and not highly demanded).
